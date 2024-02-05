@@ -44,6 +44,7 @@
 </head>
 <body>
 <h1>Input the dimensions of the frame</h1>
+<img src="{{ url_for('static', filename='images/example.png') }}" alt="example" style="position:fixed; top:30px; right:400px;width:800px;height:580px;">
 <form method="POST" action="/">
     <div>
         <label for="height">Height:</label>
@@ -70,12 +71,13 @@
         <input type="number" step="any" name="dot_yy" id="dot_yy">
     </div>
     <div>
-        <label for="eyelevel">eyelevel:</label>
-        <input type="number" step="any" name="eyelevel" id="eyelevel" required>
+        <label for="eyelevel">eyes level:</label>
+        <input type="number" step="any" name="eyelevel" id="eyelevel" value="1450" required>
     </div>
     <div>
         <input type="submit" value="Draw Frame">
     </div>
+
 </form>
 </body>
 </html>
