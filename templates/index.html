@@ -1,15 +1,81 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Matplotlib Graph</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Input the dimensions of the frame</h1>-->
+<!--    <form method="POST" action="/">-->
+<!--        <label for="height">Height:</label>-->
+<!--        <input type="number" step="any" name="height" id="height" required>-->
+<!--        <label for="width">Width:</label>-->
+<!--        <input type="number" step="any" name="width" id="width" required>-->
+<!--        <label for="dot_x">dot_x:</label>-->
+<!--        <input type="number" step="any" name="dot_x" id="dot_x" required>-->
+<!--        <label for="dot_y">dot_y:</label>-->
+<!--        <input type="number" step="any" name="dot_y" id="dot_y" required>-->
+<!--        <label for="dot_xx">dot_xx:</label>-->
+<!--        <input type="number" step="any" name="dot_xx" id="dot_xx" >-->
+<!--        <label for="dot_yy">dot_yy:</label>-->
+<!--        <input type="number" step="any" name="dot_yy" id="dot_yy" >-->
+<!--        <label for="eyelevel">eyelevel:</label>-->
+<!--        <input type="number" step="any" name="eyelevel" id="eyelevel" required>-->
+<!--        <input type="submit" value="Draw Frame">-->
+<!--    </form>-->
+<!--</body>-->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Matplotlib Graph</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Column Form</title>
+<style>
+    form div {
+        margin-bottom: 10px; /* Add some space between the form groups */
+    }
+    form label, form input {
+        display: block; /* Make the label and input take the full width of their container */
+    }
+    form input[type=submit] {
+        margin-top: 20px; /* Add a little top margin for the submit button */
+    }
+</style>
 </head>
 <body>
-    <h1>Input the dimensions of the rectangle</h1>
-    <form method="POST" action="/">
+<h1>Input the dimensions of the frame</h1>
+<form method="POST" action="/">
+    <div>
         <label for="height">Height:</label>
         <input type="number" step="any" name="height" id="height" required>
+    </div>
+    <div>
         <label for="width">Width:</label>
         <input type="number" step="any" name="width" id="width" required>
-        <input type="submit" value="Draw Rectangle">
-    </form>
+    </div>
+    <div>
+        <label for="dot_x">dot_x:</label>
+        <input type="number" step="any" name="dot_x" id="dot_x" required>
+    </div>
+    <div>
+        <label for="dot_y">dot_y:</label>
+        <input type="number" step="any" name="dot_y" id="dot_y" required>
+    </div>
+    <div>
+        <label for="dot_xx">dot_xx:</label>
+        <input type="number" step="any" name="dot_xx" id="dot_xx">
+    </div>
+    <div>
+        <label for="dot_yy">dot_yy:</label>
+        <input type="number" step="any" name="dot_yy" id="dot_yy">
+    </div>
+    <div>
+        <label for="eyelevel">eyelevel:</label>
+        <input type="number" step="any" name="eyelevel" id="eyelevel" required>
+    </div>
+    <div>
+        <input type="submit" value="Draw Frame">
+    </div>
+</form>
 </body>
+</html>

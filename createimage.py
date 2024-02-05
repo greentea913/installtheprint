@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 import io
-import numpy as np
 
 # Function to draw a rectangle with dimensions
 def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, eyelevel):
@@ -47,7 +46,6 @@ def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, e
     ax.plot([dot_x, dot_x], [dot_y, height / 2 ], linewidth=1, color='black', ls='--')
 
     if dot_yy > 0:
-
         # point width
         ax.annotate(f"{dot_yy}", xy=(dot_xx, height - dot_yy), xytext=(10, 10),
                     textcoords="offset points", ha='center', va='bottom')
@@ -69,18 +67,17 @@ def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, e
     ax.set_aspect('equal')
     ax.axis('off')
 
-    plt.show()
-    # buf = io.BytesIO()
-    # plt.savefig(buf, format='png', dpi = 300)
-    # # Close the figure to release resources
-    # plt.close(fig)
-    #
-    # # Seek to the beginning of the buffer to be able to read its contents
-    # buf.seek(0)
-    # # Return the PNG image data as a bytes object
-    # return buf.read()
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png', dpi = 300)
+    # Close the figure to release resources
+    plt.close(fig)
+
+    # Seek to the beginning of the buffer to be able to read its contents
+    buf.seek(0)
+    # Return the PNG image data as a bytes object
+    return buf.read()
 # # Set up the figure and axis
 
 # Draw a rectangle with dimensions
-draw_rectangle_with_dimensions(300, 300, 10, 20, 280, 20 , 1450 )
+
 # Display the plot
