@@ -7,14 +7,13 @@ WORKDIR /usr/src/app
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
 
+# Install Gunicorn
+RUN pip install --upgrade pip
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Make port 8000 available to the world outside this container
-EXPOSE 8000
-
-# Define environment variable to serve the app through gunicorn
-ENV FLASK_APP=app.py
+EXPOSE 8080
 
 # Start Gunicorn and serve the Flask app. Adjust the number of worker processes as needed.
 CMD ["gunicorn", "--worker-class=gevent", "--worker-connections=1000", "--workers=2" , "main:app"]
