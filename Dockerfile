@@ -8,7 +8,6 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Install Gunicorn
-RUN pip install --upgrade pip
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -16,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Start Gunicorn and serve the Flask app. Adjust the number of worker processes as needed.
-CMD ["gunicorn", "--worker-class=gevent", "--worker-connections=1000", "--workers=2" , "main:app"]
+CMD ["gunicorn", "--workers=4", "--bind=0.0.0.0:8080", "main:app"]

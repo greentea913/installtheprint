@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
-import io
+
 
 # Function to draw a rectangle with dimensions
 def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, eyelevel):
