@@ -22,7 +22,7 @@ def index():
             dot_y = float(request.form.get('dot_y', 1))
             dot_xx = get_float(request.form.get('dot_xx', 0))
             dot_yy = get_float(request.form.get('dot_yy', 0))
-            eyelevel = float(request.form.get('eyelevel', 1500))
+            eyelevel = float(request.form.get('eyelevel', 1450))
             output = draw_rectangle_with_dimensions(width, height, dot_x, dot_y, dot_xx, dot_yy, eyelevel)
 
         # Convert the image output to a Data URL

@@ -15,8 +15,6 @@ def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, e
 
     x_offset = width * 0.03  # 2% of the x-axis range
     y_offset = height * 0.03
-    print(y_offset)
-    print(x_offset)
     pointtoground = height - dot_y + eyelevel - (height / 2)
     pointtoeyeslevel = height /2 - dot_y
 

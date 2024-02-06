@@ -52,7 +52,7 @@ def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, e
     dot = plt.plot(dot_x, dot_yfromtop, marker='o', color='red')[0]  # Get the plot object for customization
     dot.set_markersize(1)  # Adjust marker size as needed
     # line of point to floor
-    ax.plot([-x_offset, -x_offset], [dot_yfromtop, -100], linewidth=1, color='black', ls='--')
+    ax.plot([-x_offset, -x_offset], [dot_yfromtop, -100], linewidth=1, color='black', ls='dashdot')
     # point to eyeslevel line
     ax.plot([dot_x, dot_x], [dot_yfromtop, height / 2 ], linewidth=1, color='black', ls='--')
 
