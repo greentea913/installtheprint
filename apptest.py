@@ -65,7 +65,7 @@ def index():
         '''
         return html
 
-    return render_template('index.html')
+    return render_template('indextest.html')
 
 
 if __name__ == '__main__':

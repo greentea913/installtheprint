@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Start Gunicorn and serve the Flask app. Adjust the number of worker processes as needed.
-CMD ["gunicorn", "--workers=4", "--bind=0.0.0.0:8080", "main:app"]
+CMD ["gunicorn", "--workers=4", "--bind=0.0.0.0:8080", "app:app"]

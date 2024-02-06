@@ -84,5 +84,5 @@ def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, e
     # Seek to the beginning of the buffer to be able to read its contents
 
 
-draw_rectangle_with_dimensions(3000,3000,200,20,2600,35,1450)
+draw_rectangle_with_dimensions(300,300,150,20,0,0,1450)
 
