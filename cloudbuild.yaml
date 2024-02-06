@@ -2,5 +2,5 @@ steps:
 - name: 'python:3.12-slim'
   entrypoint: 'bash'
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'asia-east1-docker.pkg.dev/fabled-cooler-399708/installtheprint/installtheprint01', '.' ]
-images: ['asia-east1-docker.pkg.dev/fabled-cooler-399708/installtheprint/installtheprint01']
+  args: [ 'build', '-t', '$_DOCKER_IMAGE_NAME', '.' ]
+images: ['$_DOCKER_IMAGE_NAME']

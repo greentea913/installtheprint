@@ -3,55 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Column Form</title>
+<title>Image Next to Input Box</title>
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <style>
-    form div {
-        margin-bottom: 10px; /* Add some space between the form groups */
-    }
-    form label, form input {
-        display: block; /* Make the label and input take the full width of their container */
-    }
-    form input[type=submit] {
-        margin-top: 20px; /* Add a little top margin for the submit button */
-    }
+    /* Additional styles if needed */
 </style>
 </head>
 <body>
-<h1>Input the dimensions of the frame</h1>
-<img src="{{ url_for('static', filename='images/example.png') }}" alt="example" style="position:fixed; top:30px; right:400px;width:800px;height:580px;">
-<form method="POST" action="/">
-    <div>
-        <label for="height">Height:</label>
-        <input type="number" step="any" name="height" id="height" required>
-    </div>
-    <div>
-        <label for="width">Width:</label>
-        <input type="number" step="any" name="width" id="width" required>
-    </div>
-    <div>
-        <label for="dot_x">dot_x:</label>
-        <input type="number" step="any" name="dot_x" id="dot_x" required>
-    </div>
-    <div>
-        <label for="dot_y">dot_y:</label>
-        <input type="number" step="any" name="dot_y" id="dot_y" required>
-    </div>
-    <div>
-        <label for="dot_xx">dot_xx:</label>
-        <input type="number" step="any" name="dot_xx" id="dot_xx">
-    </div>
-    <div>
-        <label for="dot_yy">dot_yy:</label>
-        <input type="number" step="any" name="dot_yy" id="dot_yy">
-    </div>
-    <div>
-        <label for="eyelevel">eyes level:</label>
-        <input type="number" step="any" name="eyelevel" id="eyelevel" value="1450" required>
-    </div>
-    <div>
-        <input type="submit" value="Draw Frame">
-    </div>
+<div class="container">
+    <h1 class="mt-4 mb-4">Input with the Frame</h1>
+    <form method="POST" action="/">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Input box -->
+                <input type="number" class="form-control" placeholder="height" name="height" id="height" style="margin-bottom: 8px;" required >
 
-</form>
+                <input type="number" class="form-control" placeholder="width" name="width" id="width" style="margin-bottom: 8px;" required>
+
+                <input type="number" class="form-control" placeholder="dot_x" name="dot_x" id="dot_x" style="margin-bottom: 8px;" required>
+
+                <input type="number" class="form-control" placeholder="dot_y" name="dot_y" id="dot_y" style="margin-bottom: 8px;" required>
+
+                <input type="number" class="form-control" placeholder="dot_xx" name="dot_xx" id="dot_xx" style="margin-bottom: 8px;">
+
+                <input type="number" class="form-control" placeholder="dot_xy" name="dot_yy" id="dot_yy" style="margin-bottom: 8px;">
+
+                <input type="number" class="form-control" placeholder="eyes level" name="eyelevel" id="eyelevel" style="margin-bottom: 8px;" required>
+                <input type="submit" value="Draw Frame">
+
+            </div>
+            <div class="col-md-8">
+                <!-- Image -->
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="example" class="img-fluid rounded">
+            </div>
+        </div>
+        <!-- Rest of the form -->
+    </form>
+</div>
+<!-- Include Bootstrap JS and its dependencies -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
