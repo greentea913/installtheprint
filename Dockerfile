@@ -17,4 +17,4 @@ EXPOSE 8000
 ENV FLASK_APP=app.py
 
 # Start Gunicorn and serve the Flask app. Adjust the number of worker processes as needed.
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn", "--worker-class=gevent", "--worker-connections=1000", "--workers=2" , "main:app"]
