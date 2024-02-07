@@ -21,9 +21,10 @@ def index():
         dot_y = float(request.form.get('dot_y', 1))
         dot_xx = get_float(request.form.get('dot_xx', 0))
         dot_yy = get_float(request.form.get('dot_yy', 0))
+        title = str(request.form.get('framename', ""))
         eyelevel = float(request.form.get('eyelevel', 1450))
         try:
-            output = draw_rectangle_with_dimensions(width, height, dot_x, dot_y, dot_xx, dot_yy, eyelevel)
+            output = draw_rectangle_with_dimensions(title, width, height, dot_x, dot_y, dot_xx, dot_yy, eyelevel)
         except Exception as e:
             # Handle the exception in a way that makes sense for your application
             print(str(e))
@@ -34,6 +35,7 @@ def index():
         data_url = base64.b64encode(output).decode('utf-8')
         image_data_url = f"data:image/png;base64,{data_url}"
         return render_template('imageoutput.html', image_data_url=image_data_url)
+        
 
     return render_template('indextest.html')
 
