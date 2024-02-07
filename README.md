@@ -8,7 +8,7 @@ There are two mode for different hanging system, single anchor mode for wire and
 double anchor mode for hanging hooks
 <br>
 User can reference the image below for usage
-<img src="example.png" alt="example" class="img-fluid rounded">
+<img src="/static/images/example.png" alt="example" class="img-fluid rounded">
 
 
  
