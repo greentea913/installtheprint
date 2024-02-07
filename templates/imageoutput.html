@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image with Return Button</title>
+    <style>
+        /* This CSS ensures that the image is never larger than the viewport */
+        img {
+            max-width: 90%;
+            max-height: 90vh; /* vh is the viewport height unit */
+            display: block; /* This removes any extra space below the image */
+            margin: auto; /* This centers the image horizontally */
+        }
+        body {
+            text-align: center; /* This centers the button text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='/'">Return to Form</button>
+    <img src="{{ image_data_url }}" alt="Generated Image">
+
+</body>
+</html>
