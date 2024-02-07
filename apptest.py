@@ -58,8 +58,9 @@ def index():
             </style>
         </head>
         <body>
-            <img src="{image_data_url}" alt="Generated Image">
             <button onclick="window.location.href='/'">Return to Form</button>
+            <img src="{image_data_url}" alt="Generated Image">
+            
         </body>
         </html>
         '''

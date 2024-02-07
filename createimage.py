@@ -38,11 +38,11 @@ def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, e
                 textcoords="offset points", ha='center', va='bottom')
 
     # Draw the rectangle
-    rectangle = plt.Rectangle((0, 0), width, height, fill=None, edgecolor='blue', linewidth=1)
+    rectangle = plt.Rectangle((0, 0), width, height, fill=None, edgecolor='powderblue', linewidth=1)
     ax.add_patch(rectangle)
     # Eyelevel line
     # ax.axhline(y=height /2 , linewidth=1, color='green')  # Adjust linewidth and color as needed
-    ax.plot([0, width], [height /2, height /2], linewidth=1, color='green')
+    ax.plot([0, width], [height /2, height /2], linewidth=1, color='greenyellow')
 
     dot_yfromtop = height - dot_y
 
