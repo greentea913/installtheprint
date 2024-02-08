@@ -10,5 +10,17 @@ double anchor mode for hanging hooks
 User can reference the image below for usage
 <img src="static/images/example.png" alt="example" class="img-fluid rounded">
 
+<h1>Requirements</h1>
+For requirement details please read requirements.txt, the tool used python with flask framework, html and matplotlib as image output. Gunicorn is used for running in production environment.
+The project is aim to be a light weight docker image which will be deploy to Google Cloud Run
+
+<h1>Change Log</h1>
+2024-02-08 added title input and display as title in the output image. For user to save the image before work and able to know which image is which work.
+
+
+<h1>To Do</h1>
+- Multi work installation to display more than one framed artwork and know the distance/ hight between them.
+- Add save and print button, for user easy download/print the image as a construction preview.
+
 
  
