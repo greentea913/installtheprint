@@ -15,7 +15,7 @@ For requirement details please read requirements.txt, the tool used python with 
 The project is aim to be a light weight docker image which will be deploy to Google Cloud Run
 
 <h1>Change Log</h1>
-2024-02-08 added title input and display as title in the output image. For user to save the image before work and able to know which image is which work.
+2024-02-08 added title input and display as title in the output image. For user to save the image before work and able to know which image is which artwork.
 
 
 <h1>To Do</h1>
