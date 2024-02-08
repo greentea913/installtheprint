@@ -3,10 +3,11 @@ from matplotlib.patches import Rectangle
 import io
 
 # Function to draw a rectangle with dimensions
-def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, eyelevel):
+def draw_rectangle_with_dimensions(title, width, height, dot_x, dot_y,dot_xx, dot_yy, eyelevel):
     # Draw the rectangle
     # Create a Matplotlib figure
     fig, ax = plt.subplots()
+    ax.set_title(title)
 
     # ax.set_xlim([-100, max(10, width)])
     # ax.set_ylim([-50, max(10, height)])
