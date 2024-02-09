@@ -20,6 +20,12 @@ def loop_of_frame(numberofframe, height_list, width_list, colors, count):
     plot.axis('off')
     return plot
 
+for x in range(numberofframe):
+    loop_of_frame(numberofframe, height_list, width_list, colors, x)
+
+# plt.tight_layout() 
+plt.show()
+
 # plot1 = plt.subplot2grid((2, 3), (0, 0), colspan=1) 
 # plot2 = plt.subplot2grid((2, 3), (0, 1), colspan=1) 
 # plot3 = plt.subplot2grid((2, 3), (0, 2), colspan=1) 
@@ -44,9 +50,3 @@ def loop_of_frame(numberofframe, height_list, width_list, colors, count):
 # plot3.set_ylim([-10, 105])
 # plot3.set_aspect('equal')
 # plot3.axis('off')
-
-for x in range(numberofframe):
-    loop_of_frame(numberofframe, height_list, width_list, colors, x)
-
-# plt.tight_layout() 
-plt.show() 
