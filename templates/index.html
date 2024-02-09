@@ -30,12 +30,15 @@
                 <input type="number" class="form-control" placeholder="dot_xy" name="dot_yy" id="dot_yy" style="margin-bottom: 8px;">
 
                 <input type="number" class="form-control" placeholder="eyes level" name="eyelevel" id="eyelevel" style="margin-bottom: 8px;" required>
+
+                <input type="text" class="form-control" placeholder="title" name="framename" id="framename" style="margin-bottom: 8px;">
+                
                 <input type="submit" value="Draw Frame">
 
             </div>
             <div class="col-md-8">
                 <!-- Image -->
-                <img src="{{ url_for('static', filename='images/example.png') }}" alt="example" class="img-fluid rounded">
+                <img src="{{ url_for('static', filename='images/example.png') }}" alt="example" class="img-fluid rounded" >
             </div>
         </div>
         <!-- Rest of the form -->

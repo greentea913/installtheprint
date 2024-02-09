@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 import io
 
-def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, eyelevel):
+def draw_rectangle_with_dimensions(title, width, height, dot_x, dot_y,dot_xx, dot_yy, eyelevel):
     # Draw the rectangle
     # Create a Matplotlib figure
-    fig, ax = plt.subplots()
-    ax.set_title('test')
+    fig, ax = plt.subplots() 
+    ax.set_title(title)
 
     # ax.set_xlim([-100, max(10, width)])
     # ax.set_ylim([-50, max(10, height)])
@@ -79,4 +79,4 @@ def draw_rectangle_with_dimensions(width, height, dot_x, dot_y,dot_xx, dot_yy, e
     ax.axis('off')
     plt.show()
     
-draw_rectangle_with_dimensions(500,500,250,50,0,0,1450)
+draw_rectangle_with_dimensions('Good old days',500,500,250,50,0,0,1450)

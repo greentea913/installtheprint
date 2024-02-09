@@ -5,7 +5,7 @@
     <style>
         /* This CSS ensures that the image is never larger than the viewport */
         img {
-            max-width: 90%;
+            max-width: 80%;
             max-height: 90vh; /* vh is the viewport height unit */
             display: block; /* This removes any extra space below the image */
             margin: auto; /* This centers the image horizontally */
@@ -20,13 +20,39 @@
             height: 100vh;
         }
         button {
-            margin-top: 20px;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
     <button onclick="window.location.href='/'">Return to Form</button>
-    <img src="{{ image_data_url }}" alt="Generated Image">
+    <button onclick="printImage()">Print Image</button>
+    <button onclick="saveImage()">Save Image</button>
+    <script>
+        function printImage() {
+            // This will open the print dialog for the user to print the image
+            window.print();
+        }
+
+        function saveImage() {
+            // This will trigger a download of the image
+            var image = document.getElementById('generatedImage');
+            var imageUrl = image.src;
+            var imageName = 'downloadedImage.png'; // You can set a specific image file name here
+
+            // Create a temporary anchor element and trigger the download
+            var downloadLink = document.createElement('a');
+            downloadLink.href = imageUrl;
+            downloadLink.download = imageName;
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+
+    <img id="generatedImage"  src="{{ image_data_url }}" alt="Generated Image">
+
+    
 
 </body>
 </html>
